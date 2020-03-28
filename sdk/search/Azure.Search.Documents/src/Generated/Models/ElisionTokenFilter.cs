@@ -27,7 +27,7 @@ namespace Azure.Search.Documents.Models
 
         /// <summary> Initializes a new instance of ElisionTokenFilter. </summary>
         /// <param name="articles"> The set of articles to remove. </param>
-        /// <param name="oDataType"> The model type. </param>
+        /// <param name="oDataType"> Identifies the concrete type of the token filter. </param>
         /// <param name="name"> The name of the token filter. It must only contain letters, digits, spaces, dashes or underscores, can only start and end with alphanumeric characters, and is limited to 128 characters. </param>
         internal ElisionTokenFilter(IList<string> articles, string oDataType, string name) : base(oDataType, name)
         {

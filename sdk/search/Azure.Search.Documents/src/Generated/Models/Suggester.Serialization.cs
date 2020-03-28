@@ -19,7 +19,7 @@ namespace Azure.Search.Documents.Models
             writer.WritePropertyName("name");
             writer.WriteStringValue(Name);
             writer.WritePropertyName("searchMode");
-            writer.WriteStringValue(SearchMode.ToSerialString());
+            writer.WriteStringValue(SearchMode);
             writer.WritePropertyName("sourceFields");
             writer.WriteStartArray();
             foreach (var item in SourceFields)
@@ -33,7 +33,7 @@ namespace Azure.Search.Documents.Models
         internal static Suggester DeserializeSuggester(JsonElement element)
         {
             string name = default;
-            SearchMode searchMode = default;
+            string searchMode = default;
             IList<string> sourceFields = default;
             foreach (var property in element.EnumerateObject())
             {
@@ -44,7 +44,7 @@ namespace Azure.Search.Documents.Models
                 }
                 if (property.NameEquals("searchMode"))
                 {
-                    searchMode = property.Value.GetString().ToSearchMode();
+                    searchMode = property.Value.GetString();
                     continue;
                 }
                 if (property.NameEquals("sourceFields"))

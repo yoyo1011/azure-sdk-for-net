@@ -20,35 +20,35 @@ namespace Azure.Search.Documents.Models
             writer.WriteStringValue(Name);
             writer.WritePropertyName("type");
             writer.WriteStringValue(Type.ToString());
-            if (Key != null)
+            if (IsKey != null)
             {
                 writer.WritePropertyName("key");
-                writer.WriteBooleanValue(Key.Value);
+                writer.WriteBooleanValue(IsKey.Value);
             }
-            if (IsHidden != null)
+            if (IsRetrievable != null)
             {
                 writer.WritePropertyName("retrievable");
-                writer.WriteBooleanValue(IsHidden.Value);
+                writer.WriteBooleanValue(IsRetrievable.Value);
             }
-            if (Searchable != null)
+            if (IsSearchable != null)
             {
                 writer.WritePropertyName("searchable");
-                writer.WriteBooleanValue(Searchable.Value);
+                writer.WriteBooleanValue(IsSearchable.Value);
             }
-            if (Filterable != null)
+            if (IsFilterable != null)
             {
                 writer.WritePropertyName("filterable");
-                writer.WriteBooleanValue(Filterable.Value);
+                writer.WriteBooleanValue(IsFilterable.Value);
             }
-            if (Sortable != null)
+            if (IsSortable != null)
             {
                 writer.WritePropertyName("sortable");
-                writer.WriteBooleanValue(Sortable.Value);
+                writer.WriteBooleanValue(IsSortable.Value);
             }
-            if (Facetable != null)
+            if (IsFacetable != null)
             {
                 writer.WritePropertyName("facetable");
-                writer.WriteBooleanValue(Facetable.Value);
+                writer.WriteBooleanValue(IsFacetable.Value);
             }
             if (Analyzer != null)
             {

@@ -1,7 +1,6 @@
 # Release History
 
-## 12.5.0-preview.1 (Unreleased)
-
+## 12.5.0-preview.0
 
 ## 12.4.1 (2020-04)
 - Fixed bug where BlobContainerClient.DeleteIfExistsAsync() would throw an exception if hierarchical namespace was enabled, and the underlying container didn't exist.
